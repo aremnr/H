@@ -12,7 +12,7 @@ def pdf_processing(path: str):
     for page_number in range(n_pages):
         page = pdf.get_page(page_number)
         pil_image = page.render(
-        scale=1,
+        scale=10,
         rotation=0,
         crop=(0, 0, 0, 0)).to_pil()
         pil_image.save(f"./temp_imgs/out{page_number+1}.png")
